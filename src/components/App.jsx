@@ -5,17 +5,8 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
-  const [notes, setNotes] = useState(()=>JSON.parse(localStorage.getItem("notes"??"[]")));
+  const [notes, setNotes] = useState([]);
 
-  useEffect(()=>{
-    localStorage.setItem("notes",JSON.stringify(notes))
-    ;
-    if(notes.length===0){document.title = "Keeper App";}
-    else if (notes.length===1){document.title="1 note"}
-    else if (notes.length>=2){
-        document.title=`${notes.length} notes`
-    }
-    }, [notes]);
 
   function addNote(newNote) {
     setNotes(prevNotes => {
