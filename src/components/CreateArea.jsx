@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
@@ -8,7 +8,9 @@ function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
     content: ""
-  });
+});
+  
+  
 
   function handleChange(event) {
     const { name, value } = event.target;
