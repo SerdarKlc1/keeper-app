@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
@@ -36,19 +38,22 @@ footer {
 footer p {
   color: #ccc;
 }
+
 .note {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
+  width: 100%; 
+  margin: 16px 0; 
+  float: none; 
 }
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -70,13 +75,14 @@ footer p {
 
 form.create-note {
   position: relative;
-  width: 480px;
+  width: 100%;
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
 form.create-note input,
 form.create-note textarea {
   width: 100%;
@@ -87,6 +93,7 @@ form.create-note textarea {
   font-family: inherit;
   resize: none;
 }
+
 form.create-note button {
   position: absolute;
   right: 18px;
@@ -100,4 +107,39 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+
+@media (min-width: 600px) {
+  .note {
+    width: calc(50% - 32px); 
+    margin: 16px;
+    float: left;
+  }
+
+  form.create-note {
+    width: 80%; 
+  }
+}
+
+
+@media (min-width: 768px) {
+  .note {
+    width: calc(33.333% - 32px); 
+  }
+
+  form.create-note {
+    width: 60%; 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .note {
+    width: 240px; 
+  }
+
+  form.create-note {
+    width: 480px; 
+  }
 }
