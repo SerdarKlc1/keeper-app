@@ -2,7 +2,7 @@
   "name": "my-keeper-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ttps://takenote-keeper.netlify.app",
+  "homepage": "https://takenote-keeper.netlify.app",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
